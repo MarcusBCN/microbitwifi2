@@ -1,12 +1,12 @@
-# AlfonsoIOT S
+# AlfonsoIOT Micro:bit
 
 A PXT library for Micro:bit IOT 
 
 ## Blocks
 
-### 1. Initialize WiFi IoT Shield
+### 1. Initialize WiFi IoT 
 
-Sets up the micro:bit WiFi IoT Shield used for the micro:bit.
+Sets up the micro:bit WiFi IoT  used for the micro:bit.
 
 ```blocks
 AlfonsoIoT.initializeWifi()
@@ -14,7 +14,7 @@ AlfonsoIoT.initializeWifi()
 
 ### 2. Set WiFi
 
-Connect the Microbit WiFi IoT Shield to the WiFi (Home router)
+Connect the Microbit WiFi IoT  to the WiFi (Home router)
 
 ```blocks
 AlfonsoIoT.setWifi("muselab", "12345678")
@@ -25,7 +25,7 @@ Here we take "AlfonsoIOT" as router SSID and "12345678" as router password.
 
 ### 3. Set WiFi hotspot
 
-Configure the Micro:bit WiFi IoT Shield as a hotspot.
+Configure the Micro:bit WiFi IoT  as a hotspot.
 
 ```blocks
 AlfonsoIoT.setWifiHotspot("muselab", "12345678")
