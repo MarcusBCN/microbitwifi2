@@ -1,37 +1,37 @@
-# Muselab IOT Shield
+# AlfonsoIOT S
 
-A PXT library for Muse IOT Shield
+A PXT library for Micro:bit IOT 
 
 ## Blocks
 
 ### 1. Initialize WiFi IoT Shield
 
-Sets up the Muselab WiFi IoT Shield used for the micro:bit.
+Sets up the micro:bit WiFi IoT Shield used for the micro:bit.
 
 ```blocks
-MuseIoT.initializeWifi()
+AlfonsoIoT.initializeWifi()
 ```
 
 ### 2. Set WiFi
 
-Connect the Muselab WiFi IoT Shield to the WiFi (Home router)
+Connect the Microbit WiFi IoT Shield to the WiFi (Home router)
 
 ```blocks
-MuseIoT.setWifi("muselab", "12345678")
+AlfonsoIoT.setWifi("muselab", "12345678")
 ```
 
-Here we take "muselab" as router SSID and "12345678" as router password.
+Here we take "AlfonsoIOT" as router SSID and "12345678" as router password.
 
 
 ### 3. Set WiFi hotspot
 
-Configure the Muselab WiFi IoT Shield as a hotspot.
+Configure the Micro:bit WiFi IoT Shield as a hotspot.
 
 ```blocks
-MuseIoT.setWifiHotspot("muselab", "12345678")
+AlfonsoIoT.setWifiHotspot("muselab", "12345678")
 ```
 
-For the hotspot, here we take "muselab" as SSID and "12345678" as password.
+For the hotspot, here we take "AlfonsoIOT" as SSID and "12345678" as password.
 
 
 ### 4. Connect to ThingSpeak
@@ -39,10 +39,10 @@ For the hotspot, here we take "muselab" as SSID and "12345678" as password.
 Upload data to ThingSpeak
 
 ```blocks
-MuseIoT.sendThingspeak("asdasdasdasdasdasd", 0, 0)
+AlfonsoIoT.sendThingspeak("asdasdasdasdasdasd", 0, 0)
 ```
 
-Here we take "asdasdasdasdasdasd" as the ThingSpeak key, 0 as field1 value and 0 as field2 value.
+Here we take "Alfonso" as the ThingSpeak key, 0 as field1 value and 0 as field2 value.
 
 
 ### 5. Connect to IFTTT
@@ -50,15 +50,15 @@ Here we take "asdasdasdasdasdasd" as the ThingSpeak key, 0 as field1 value and 0
 Trigger the IFTTT cloud event such as email, sms and so on.
 
 ```blocks
-    MuseIoT.sendIFTTT(
-    "asdasdasdasdasdasd",
+    AlfonsoIoT.sendIFTTT(
+    "Alfonso",
     "email",
     0,
     0
     )
 ```
 
-Here we take "asdasdasdasdasdasd" as IFTTT key, email as event name, 0 as value1 and 0 as value2.
+Here we take "Alfonso" as IFTTT key, email as event name, 0 as value1 and 0 as value2.
 
 ## License
 
