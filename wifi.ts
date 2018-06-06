@@ -1,9 +1,9 @@
-namespace MuseIoT {
+namespace AlfonsoIoT {
 	let flag = true;
 	
 	// -------------- 1. Initialization ----------------
-    //%blockId=muselab_initialize_wifi
-    //%block="Initialize WiFi IoT Shield"
+    //%blockId=AlfonsoIOT_initialize_wifi
+    //%block="Initialize WiFi IoT"
 	//% weight=90	
 	//% blockGap=7	
     export function initializeWifi(): void {
@@ -11,7 +11,7 @@ namespace MuseIoT {
     }
 	
 	// -------------- 2. WiFi ----------------
-    //% blockId=muselab_set_wifi
+    //% blockId=AlfonsoIOT_set_wifi
 	//% block="Set wifi to ssid %ssid| pwd %pwd"   
 	//% weight=80		
 	//% blockGap=7	
@@ -20,7 +20,7 @@ namespace MuseIoT {
     }
 
 	// -------------- 3. Cloud ----------------
-    //% blockId=muselab_set_thingspeak
+    //% blockId=AlfonsoIOT_set_thingspeak
 	//% block="Send ThingSpeak key %key| field1 %field1| field2 %field2"
 	//% weight=70	
 	//% blockGap=7	
@@ -36,7 +36,7 @@ namespace MuseIoT {
     }
 	
 	// -------------- 4. Others ----------------
-	//% blockId=muselab_set_wifi_hotspot
+	//% blockId=AlfonsoIOT_set_wifi_hotspot
 	//% block="Set hotspot to ssid %ssid| pwd %pwd"   
 	//% weight=58	
 	//% blockGap=7	
@@ -44,7 +44,7 @@ namespace MuseIoT {
         serial.writeLine("(AT+wifi_hotspot?ssid="+ssid+"&pwd="+pwd+")"); 
     }
 	
-    //%blockId=muselab_start_server
+    //%blockId=AlfonsoIOT_start_server
     //%block="Start web listening"
 	//% weight=55	
     export function startWebServer(): void {
@@ -62,11 +62,11 @@ namespace MuseIoT {
 	// -------------- 5. Advanced Wifi ----------------
 	
 	//%subcategory=More
-    //%blockId=muselab_muse_mqtt
-    //%block="Connect to Muse MQTT server"
+    //%blockId=AlfonsoIOT_alfonso_mqtt
+    //%block="Connect to Alfonso MQTT server"
 	//% weight=44
 	//% blockGap=7	
-    export function connectMuseMQTT(): void {
+    export function connectAlfonsoMQTT(): void {
         serial.writeLine("(AT+startMQTT?host=13.58.53.42&port=1883&clientId=100&username=omlxmgsy&password=AoGUfQNPkeSH)");
 		while(true) {
 			serial.writeLine("(AT+write_sensor_data?p0=" + pins.analogReadPin(AnalogPin.P0) + "&p1=" + pins.analogReadPin(AnalogPin.P1) + "&p2=" + pins.analogReadPin(AnalogPin.P2) + ")")
@@ -75,7 +75,7 @@ namespace MuseIoT {
     }
 	
 	//%subcategory=More
-	//% blockId=muselab_general_mqtt
+	//% blockId=AlfonsoIOT_general_mqtt
 	//% block="Connect MQTT server %host| port %port| client id %clientId| username %username| password %pwd"
 	//% weight=43
 	//% blockGap=7	
@@ -84,7 +84,7 @@ namespace MuseIoT {
     }
 	
 	//%subcategory=More
-    //%blockId=muselab_mqtt_publish
+    //%blockId=AlfonsoIOT_mqtt_publish
     //% block="MQTT publish topic %topic| payload %payload"
 	//% weight=42	
 	//% blockGap=7	
@@ -93,7 +93,7 @@ namespace MuseIoT {
     }	
 	
 	//%subcategory=More
-    //%blockId=muselab_mqtt_subscribe
+    //%blockId=AlfonsoIOT_mqtt_subscribe
     //% block="MQTT subscribe topic %topic"
 	//% weight=41	
     export function mqttSubscribe(topic: string): void {
@@ -103,7 +103,7 @@ namespace MuseIoT {
 	// -------------- 6. General ----------------		
 
 	//%subcategory=More
-    //%blockId=muselab_battery
+    //%blockId=AlfonsoIOT_battery
     //%block="Get battery level"
 	//% weight=40
 	//% blockGap=7		
@@ -113,7 +113,7 @@ namespace MuseIoT {
     }	
 	
 	//%subcategory=More
-    //%blockId=muselab_version
+    //%blockId=AlfonsoIOT_version
     //%block="Get firmware version"
 	//% weight=39	
 	//% blockGap=7		
@@ -122,7 +122,7 @@ namespace MuseIoT {
     }
 	
 	//%subcategory=More
-    //%blockId=muselab_at
+    //%blockId=AlfonsoIOT_at
     //%block="Send AT command %command"
 	//% weight=30	
 	//% blockGap=7		
@@ -132,7 +132,7 @@ namespace MuseIoT {
     }
 	
 	//%subcategory=More
-    //%blockId=muselab_test
+    //%blockId=AlfonsoIOT_test
     //%block="Send AT test"
 	//% weight=20	
 	//% blockGap=7		
@@ -141,7 +141,7 @@ namespace MuseIoT {
     }
 	
 	//%subcategory=More
-    //%blockId=muselab_deep_sleep
+    //%blockId=AlfonsoIOT_deep_sleep
     //%block="Set deep sleep %second| second"
 	//% weight=15	
     export function setDeepSleep(second: number): void {
